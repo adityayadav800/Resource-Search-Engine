@@ -11,4 +11,4 @@ To use this resource search Engine
   ```python
 python manage.py runserver
 ```
-4. Use the Resource Search Engine filling the required Fields and get all the free resources in one Go on [localhost:8000]
+4. Use the Resource Search Engine filling the required Fields and get all the free resources in one Go on [localhost:8000](localhost:8000)
