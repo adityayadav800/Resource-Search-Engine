@@ -1,7 +1,7 @@
 # Resource-Search-Engine
 
 ### Helps you find  online resources like reading videos and books all at one button click. 
-#### It uses BeautifulSoup4 and Googlesearch python module to scrape the web and youtube for resouces based on thr provided input. 
+#### It uses BeautifulSoup4 and Googlesearch python module to scrape the web and youtube for resources based on the provided input. 
 
 To use this resource search Engine 
 
