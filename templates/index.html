@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resource Searcher</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style type="text/css">
+		
+nav{
+	height: 100px;
+	line-height: auto;
+	font-size: 50px;
+	font-family: sans-serif;
+	
+}
+.container{
+	display: flex;
+	flex-direction: column;
+    width: 100%;
+    height: auto;
+
+}
+.readableLinks{
+	width: 100%;
+    height: auto;
+    color: hsla(123,233,166,1);
+    opacity: 0.6;
+    background-color: white;
+}
+.VideoLinks{
+	width: 100%;
+    height: auto;
+    color: hsla(123,233,166,1);
+    opacity: 0.6;
+    background-color: white;
+}
+.books{
+	width: 100%;
+    height: auto;
+    color: hsla(123,233,166,1);
+    opacity: 0.6;
+    background-color: white;
+}
+	</style>
+</head>
+<body>
+	<nav>Resource Searcher</nav>
+	<form class="w3-container w3-card-4 w3-light-grey formIn" action="{% url 'buttonClicked' %}" method="GET"> <h2>Search Parameters</h2>
+		<label for="field">Field</label>
+		<input  class="w3-input w3-border formIn1" type="text" name="field" placeholder="Field" >
+        <label for="class">Class</label>
+		<input  class="w3-input w3-border formIn1" type="text" name="class" placeholder=" Class">
+		<label for="subject">Subject</label>
+		<input  class="w3-input w3-border formIn1" type="text" name="subject" placeholder="Subject">
+		<label for="topic">Topic</label>
+		<input  class="w3-input w3-border formIn1" type="text" name="topic" placeholder="Topic">
+		<input type="submit" class="w3-input w3-border formIn1">
+	</form>
+	<div class="container">
+		<div class="readableLinks">
+        <h3>Links</h3>
+		{% if read %}
+			{% for i in read %}
+        		<ul>
+         			<li>
+         			<a href="{{i}}" target="_blank">{{i}}</a>
+         			</li>
+         		</ul>
+			{%  endfor %}
+		
+		{% endif %}
+		</div>
+		<div class="VideoLinks">
+        <h3>Video</h3>
+		{% if video %}
+			{% for i in video %}
+        		<ul>
+         			<li>
+         			<a href="{{i}}" target="_blank">{{i}}</a>
+         			</li>
+         		</ul>
+			{%  endfor %}
+		
+		{% endif %}
+		</div>
+		<div class="books">
+         <h3>Books</h3>
+		{% if book %}
+			{% for i in book %}
+        		<ul>
+         			<li>
+         			<a href="{{i}}" target="_blank">{{i}}</a>
+         			</li>
+         		</ul>
+			{%  endfor %}
+		
+		{% endif %}
+		</div>
+	</div>	
+</body>
+</html>
